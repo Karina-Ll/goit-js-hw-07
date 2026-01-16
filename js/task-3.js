@@ -4,6 +4,7 @@ const output = document.querySelector('#name-output');
 input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  const inputValue = event.currentTarget.value;
-  output.textContent = inputValue === '' ? 'Anonymous' : inputValue;
+  const trimmedValue = event.currentTarget.value.trim();
+
+  output.textContent = trimmedValue === '' ? 'Anonymous' : trimmedValue;
 }
